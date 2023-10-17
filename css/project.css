@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+}
+/* chỉnh chung 3 dự án */
+.hidden {
+  display: none;
+}
+.row {
+  padding: 30px;
+}
+.tenduan {
+  text-align: center;
+}
+.duan {
+  padding: 20px;
+}
+.cac {
+  padding: 0 12px;
+}
+h4 {
+  text-align: center;
+}
+.duanCV {
+  margin: 0 0;
+}
+.nhom {
+  padding: 0 0;
+}
+/* Chỉnh phần Goals-mục tiêu */
+.muctieu p {
+  margin-bottom: 0; /*bỏ phần mặc đinh của p*/
+}
+.muctieu {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #b1a8a8;
+}
+/* Chỉnh phần Timeline*/
+h2 {
+  display: inline-block;
+  border-radius: 50% 50%;
+  border: 2px solid #291161;
+  padding: 10px;
+  color: aliceblue;
+}
+.thoigian p {
+  margin-bottom: 0;
+}
+.thoigian {
+  padding: 10px 0;
+  border-bottom: 1px dashed #b1a8a8;
+}
+.gs,
+.tp {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chỉnh riêng dự án CV cá nhân */
+.duancv {
+  background-color: rgb(215, 194, 242);
+}
+.duancv .tenduan {
+  color: rgb(97, 25, 190);
+}
+.duancv .duan {
+  border: 5px solid rgb(97, 25, 190);
+}
+.duancv h2 {
+  background-color: rgb(159, 90, 220);
+}
+.duancv .duan h1 {
+  color: #5b1bee;
+  border-bottom: 2px solid #736e6e;
+}
+
+/* Chỉnh riêng dự án Trẻ em */
+.duante {
+  background-color: rgb(207, 244, 232);
+}
+.duante .tenduan {
+  color: rgb(54, 128, 48);
+}
+.duante .duan {
+  border: 5px solid rgb(54, 128, 48);
+}
+.duante h2 {
+  background-color: rgb(45, 225, 135);
+}
+.duante .duan h1 {
+  color: #559d36;
+  border-bottom: 2px solid #736e6e;
+}
+
+/* Chỉnh riêng dự án Thư viện */
+.duantv {
+  background-color: #f8c3e2;
+}
+.duantv .tenduan {
+  color: rgb(166, 36, 112);
+}
+.duantv .duan {
+  border: 5px solid rgb(166, 36, 112);
+}
+.duantv h2 {
+  background-color: rgb(168, 40, 125);
+}
+.duantv .duan h1 {
+  color: #850851;
+  border-bottom: 2px solid #736e6e;
+}

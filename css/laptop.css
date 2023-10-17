@@ -1,0 +1,293 @@
+* {
+  margin: 0px;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  /* width: 1170px; */
+  margin: auto;
+  display: block;
+  padding: 30px 50px;
+}
+
+#nav-bar {
+  text-align: center;
+}
+
+/* Phần 1. Banner */
+#banner img {
+  filter: brightness(50%);
+} /*làm tối ảnh*/
+#banner {
+  position: relative;
+} /*định vị tương đối để cbị đính chữ */
+#banner div {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 35%;
+  color: rgb(192, 229, 196);
+  text-align: center;
+}
+
+/* Phần 2. Navbar */
+#nav-bar a {
+  text-decoration: none; /*bỏ gạch dưới link*/
+  text-transform: uppercase; /*in hoa link*/
+  color: #4e0808;
+  padding: 20px 30px;
+  border-left: 1px solid #d1cdcd;
+  border-right: 1px solid #d1cdcd;
+}
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /*chọn tương đối để đính ảnh đại diện*/
+  padding: 0 50px;
+}
+.anhdaidien {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 12%; /*tỉ lệ so với w màn hình*/
+  border: 12px solid #f7f7f7;
+  border-radius: 50%;
+}
+#nav-bar i {
+  color: rgb(0, 17, 255);
+}
+#nav-bar div {
+  padding: 0px 120px;
+}
+
+/* Phần 3. Thông tin cá nhân */
+#about .container {
+  display: flex;
+  justify-content: center;
+  padding: 0 50px;
+}
+#about h1 {
+  padding-bottom: 30px;
+}
+#target {
+  padding: 60px 50px 60px 60px;
+  background-color: #e6e1e1;
+}
+#target p {
+  padding-bottom: 10px;
+  color: #5e5b5b;
+}
+#personal-info {
+  padding: 60px 50px 60px 80px;
+  background-color: #d5d1d1;
+}
+.mt-40 {
+  padding-inline-start: 0;
+  padding-bottom: 10px;
+}
+.mt-40 li {
+  padding-bottom: 10px;
+  list-style: none; /*bỏ dấu chấm danh sách*/
+  color: #5e5b5b;
+}
+.mt-40 span {
+  font-weight: bold;
+}
+.ketnoi i {
+  padding-right: 8px;
+  color: rgb(0, 17, 255);
+}
+/* ASM3-9 ẩn thông tin cá nhân, chỉ hiện hộp nhập mail*/
+/* Tạo thêm lớp ẩn và lớp hiệu ứng cảnh báo khi nhập sai dạng mail */
+.hidden {
+  display: none;
+}
+.canhbao {
+  /* ASM3-9 lớp hiệu ứng cảnh báo */
+  font-size: 18px;
+  color: #a51010;
+}
+
+/* Phần 4. Thông tin nghề nghiệp */
+/* Chỉnh chung cho 6 hộp thông tin */
+#job-info .container {
+  display: flex;
+}
+.nd {
+  display: grid;
+  grid-template-columns: 75% 25%; /*chia gridlayout 3 phần 75%-25%cho nhóm thông tin chính*/
+  grid-template-rows: 100px auto; /*hàng 1-100px; hàng 2 đổ theo nội dung*/
+  border: 1px solid #e0dbdb;
+  align-items: center;
+}
+.nd .chitiet {
+  grid-column: 1/-1; /* cho griditem chitiet trải rộng 2 cột */
+  color: #5e5b5b;
+  padding: 0 30px;
+  align-self: start; /*ghi đè dòng lệnh align-items để ko cần đặt thêm class*/
+}
+.nd i {
+  font-size: 35px;
+  color: #c1bdbd;
+}
+.ct {
+  padding-bottom: 50px;
+}
+.view-more,
+.chitiet {
+  display: none;
+}
+/* Dành chung cho kinh nghiệm-học vấn-hoạt động */
+.ct div:first-child {
+  font-weight: bold;
+}
+.ct div:nth-child(2) {
+  font-style: italic;
+}
+.chinh {
+  position: relative;
+}
+.chinh:before {
+  position: absolute;
+  content: "";
+  background-color: rgb(0, 17, 255);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: -15px;
+  top: 8px;
+}
+.nut {
+  padding: 0 5px;
+  background-color: rgb(0, 17, 255);
+  color: #f7f7f7;
+  border-radius: 8px; /*.nut này ở phần học vấn*/
+}
+
+/* Dành cho phần sở thích*/
+.sothich {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.sothich div {
+  text-align: center;
+}
+.sothich i {
+  font-size: 20px;
+  border: 2px solid #3478ca;
+  padding: 10px;
+  border-radius: 10% 50%;
+}
+
+/* Dành cho phần ngôn ngữ, kỹ năng*/
+/* Gần giống tạo nút trước đoạn văn bản dùng content="", tạo dải ngang dùng span */
+.nn span,
+.skill span {
+  width: 45px;
+  height: 3px;
+  background-color: #e3dcdc; /*thêm màu, rộng dài cho các span*/
+  display: inline-block;
+  margin-right: 10px;
+}
+/* Chọn màu cho các cấp độ kỹ năng, ghi đè lên màu xám #e3dcdc này */
+.lkh span,
+.lvn span {
+  background-color: rgb(57, 28, 159);
+}
+#coban {
+  background-color: rgb(57, 28, 159);
+}
+.anhngu #nangcao,
+.xldb #nangcao {
+  background-color: rgb(57, 28, 159);
+}
+
+/* Phần 5.Chứng chỉ - giải thưởng */
+.cer {
+  padding: 20px;
+  color: #5e5b5b;
+}
+.cc1,
+.cc2 {
+  border-bottom: 1px solid #d6c08d;
+}
+.cc2 div {
+  position: relative;
+}
+.cc2 div:before {
+  content: "";
+  background-color: #d6c08d;
+  width: 1px;
+  position: absolute;
+  left: -13px;
+  top: 0px;
+  bottom: 0px;
+}
+
+/* Phần 6.Dự án */
+.da {
+  border: 1px solid #e0dbdb;
+  color: #5e5b5b;
+  padding: 20px;
+}
+.tenduan {
+  padding: 10px;
+  border-bottom: 1px solid #e0dbdb;
+  border-top: 1px solid #e0dbdb;
+  font-weight: bold;
+}
+.tenduan a {
+  text-decoration: none;
+}
+.donvi {
+  padding: 10px;
+}
+.donvi div {
+  display: inline-block;
+}
+.donvi div:first-child {
+  display: inline-block;
+  background-color: rgb(0, 17, 255);
+  color: #f7f7f7;
+  border-radius: 30%;
+  padding: 3px 5px;
+}
+/* lưu ý 1 số root được bootstrap cài sẵn ko đổi trực tiếp được thì đặt tên lớp để ghi đè-t/hợp này là thẻ td,tr */
+.thanduan {
+  padding: 8px 6px;
+  border-top: 1px solid #c1bdbd; /* bảng chỉ chứa đường kẻ ngang */
+}
+.thanduan:first-child {
+  width: 30%; /* tăng chiều rộng cột 1 của bảng */
+  vertical-align: top; /*canh lề theo chiều dọc cho văn bản*/
+}
+
+/* Phần 7.Chân trang */
+footer {
+  padding: 30px 0px;
+  text-align: center;
+}
+.chantrang li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.chantrang i {
+  font-size: 25px;
+  background-color: rgb(0, 17, 255);
+  color: #e6e1e1;
+  border-radius: 45%;
+}
+.chantrang a {
+  text-decoration: none;
+  color: #5e5b5b;
+  font-size: 23px;
+}
+.chantrang ul {
+  padding-left: 0;
+}

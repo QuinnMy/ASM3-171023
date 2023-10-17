@@ -1,0 +1,38 @@
+/* ASM3-2. Chia file CSS cho từng màn hình
+chọn 992px cho chiều rộng lớn nhất của tablet, đổi màu body sang xanh dương */
+@media screen and (max-width: 992px) {
+  /* body {
+    background-color: rgb(179, 231, 238);
+  } */
+  /* ASM3-0. Phần Banner */
+  #banner img {
+    /* nếu đặt w=auto thì ảnh sẽ tính tỉ lệ ko co giãn của lệnh none*height400px làm kq ra khỏi div nên ko cần đặt w để w đi theo w của vùng chứa div --> chỉ cần h mong muốn thì obj-fit none sẽ tự cắt ở giữa với chiều cao đó, cần lệch hình thì dùng obj-pos  */
+    height: 400px;
+    object-fit: none;
+  }
+  /* Chỉnh lại lề đè lên cài đặt của row */
+  #nav-bar .container,
+  #about .container,
+  #job-info .container,
+  #project .container {
+    padding: 0 20px;
+  }
+  /* ASM3-3. Phần Navbar: ẩn phần tên ở giữa Navbar, chỉ cần chọn 1 lần sẽ áp dụng cho cả mobile vì lệnh max-width thoả mãn */
+  #nav-bar div,
+  .anhdaidien {
+    display: none;
+  }
+  #nav-bar a {
+    font-size: 16px;
+  }
+  /* ASM3-4 Phần Thông tin cá nhân: canh chỉnh lề */
+  #target,
+  #personal-info {
+    padding: 20px 20px 20px 30px;
+  }
+  /* ASM3-8. Phần Footer: */
+  .chantrang i,
+  .chantrang a {
+    font-size: 88%;
+  }
+}
